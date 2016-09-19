@@ -1,15 +1,11 @@
 ---
 layout: page
-title: About
+title: はじめに
 permalink: /about/
 ---
 
-Some information about you!
+身内で共有したい内容とかをどんどんメモします。
 
-### More Information
+### なかのひと
 
-A place to include any other types of information that you'd like to include about yourself.
-
-### Contact me
-
-[email@domain.com](mailto:email@domain.com)
+ToS*ライマでクロノ目指して精進中。
