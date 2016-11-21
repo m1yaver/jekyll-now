@@ -3,6 +3,7 @@ layout: post
 title: はじめに知っておくべきこと
 tags:
 - tips
+published: false
 ---
 
 始めたばかりで右も左もわからない人たちへ
