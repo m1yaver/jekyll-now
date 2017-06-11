@@ -23,11 +23,111 @@ body {
   color: $darkGray;
 }
 
-.container {
+.header {
   margin: 0 auto;
-  max-width: 740px;
   padding: 0 10px;
   width: 100%;
+  height: 250px;
+  background-image: url({{site.baseurl}}/images/header.png);
+  background-position: bottom -1px left;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@include PC {
+  .header {
+    background-position: center left;
+  }
+}
+
+@include mobile {
+  .header {
+    height: auto;
+  }
+}
+
+.header h1 a {
+  color: $white;
+}
+
+.header .site-description {
+  color: $white;
+}
+
+.header nav a {
+  color: $white;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1020px;
+  padding: 0 10px;
+  width: 100%;
+}
+
+/* set flexbox for 2column content */
+
+@include PC {
+  .flexbox {
+    display: -webkit-flex;
+    display: flex;
+  }
+}
+
+.main {
+  flex: 1;
+}
+
+.side-bar {
+  padding: 0 15px;
+  width: 100%;
+
+  h3,dt {
+    font-weight: bold;
+    font-size: 1rem;
+  }
+
+  p,dd {
+    font-size: 1rem;
+  }
+}
+
+@include PC {
+  .side-bar {
+    width: 300px;
+    margin-left: 15px;
+  }
+}
+
+@include mobile {
+  .side-bar {
+    text-align: center;
+  }
+}
+
+.character {
+  img {
+    display: block;
+    width: 2.5rem;
+    float: left;
+    margin-right: 4px;
+    border-radius: 2px;
+  }
+
+  dt,dd {
+    text-align: left;
+  }
+}
+
+@include mobile {
+  .characters {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .mobile-hidden {
+    display: none;
+  }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -45,7 +145,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  font-size: 30px;
+  font-size: 26px;
   a {
     color: inherit;
   }
@@ -69,11 +169,11 @@ p {
 }
 
 a {
-  color: $blue;
+  color: $pink;
   text-decoration: none;
 	cursor: pointer;
   &:hover, &:active {
-    color: $blue;
+    color: $pink;
   }
 }
 
@@ -156,7 +256,6 @@ img {
 
 .masthead {
   padding: 20px 0;
-  border-bottom: 1px solid $lightGray;
 
   @include mobile {
     text-align: center;
@@ -232,7 +331,7 @@ nav {
 
     @include mobile {
       margin: 0 10px;
-      color: $blue;
+      color: $pink;
     }
   }
 }
@@ -249,6 +348,10 @@ nav {
 .posts > .post:last-child {
   padding-bottom: 1em;
   border-bottom: none;
+}
+
+.posts > .post:first-child h1 {
+  margin-top: 0;
 }
 
 .post {
@@ -268,6 +371,12 @@ nav {
   .read-more {
     text-transform: uppercase;
     font-size: 15px;
+  }
+
+  img {
+    padding: 7px 7px;
+    box-shadow: 5px 5px 18px $lighterGray;
+    transform: rotate(-0.5deg);
   }
 }
 

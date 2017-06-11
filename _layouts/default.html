@@ -17,25 +17,66 @@
 
   <body>
     <div class="wrapper-masthead">
-      <div class="container">
+      <div class="header">
         <header class="masthead clearfix">
+          <!--
           <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
+        -->
 
           <div class="site-info">
             <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
             <p class="site-description">{{ site.description }}</p>
           </div>
 
+          <!--
           <nav>
             <a href="{{ site.baseurl }}/">Blog</a>
             <a href="{{ site.baseurl }}/about">About</a>
           </nav>
+        -->
         </header>
       </div>
     </div>
 
-    <div id="main" role="main" class="container">
-      {{ content }}
+    <div id="container" class="container flexbox">
+      <div id="main" role="main" class="main">
+        {{ content }}
+      </div>
+
+      <div id="side-bar" class="side-bar clearfix">
+        <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
+        <dl class="clearfix">
+          <dt>Author</dt>
+          <dd>幸宮ユキ<br>
+          <a href="https://twitter.com/m1yaver" target="_blank">@m1yaver</a></dd>
+        </dl>
+        <p>ライマでのんびりToS日記<br>
+        最近はクリクロちゃん🙌</p>
+        <h3>Characters</h3>
+        <div class="characters">
+          <dl class="character clearfix">
+            <img src="{{baseurl}}/images/icon80_yuki.png">
+            <dt>ユキ</dt>
+            <dd>クリオクロノ
+              <span class="mobile-hidden"> Lv.259</span></dd>
+          </dl>
+          <dl class="character clearfix">
+            <img src="{{baseurl}}/images/icon80_ver.png">
+            <dt>ベル</dt>
+            <dd>ハイドペ<span class="mobile-hidden"> Lv.244</span></dd>
+          </dl>
+          <dl class="character clearfix">
+            <img src="{{baseurl}}/images/icon80_mer.png">
+            <dt>メル</dt>
+            <dd>ハイフェ<span class="mobile-hidden"> Lv.303</span></dd>
+          </dl>
+          <dl class="character clearfix">
+            <img src="{{baseurl}}/images/icon80_aki.png">
+            <dt>アキ</dt>
+            <dd>クォシュ<span class="mobile-hidden"> Lv.224</span></dd>
+          </dl>
+        </div>
+      </div>
     </div>
 
     <div class="wrapper-footer">

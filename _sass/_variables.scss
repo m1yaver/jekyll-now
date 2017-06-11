@@ -5,24 +5,33 @@
 
 // Colors
 $blue: #4183C4;
+$pink: #E85298;
 
 // Grays
 $black: #000;
 $darkerGray: #5D544E;
 $darkGray: #6D544E;
 $gray: #666;
+$lighterGray: #999;
 $lightGray: #eee;
 $white: #fff;
 
 // Font stacks
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
 $meiryo: Helvetica, Arial, sans-serif;
 $meiryo: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $georgia: Georgia, serif;
-$meiryo: "メイリオ", Meiryo, Verdana, Helvetica, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ＭＳ Ｐゴシック", sans-serif;
+$meiryo: "Noto Sans Japanese", "メイリオ", Meiryo, Verdana, Helvetica, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "ＭＳ Ｐゴシック", sans-serif;
 
 // Mobile breakpoints
 @mixin mobile {
   @media screen and (max-width: 640px) {
+    @content;
+  }
+}
+
+@mixin PC {
+  @media screen and (min-width: 890px) {
     @content;
   }
 }
